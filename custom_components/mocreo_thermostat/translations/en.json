@@ -1,0 +1,61 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Mocreo Thermostat",
+        "description": "Choose a discovered Mocreo ST7-CL thermostat or enter its Bluetooth address manually.",
+        "data": {
+          "address": "Device",
+          "poll_interval": "Polling interval (seconds)"
+        }
+      },
+      "manual": {
+        "title": "Enter Device Address",
+        "description": "Enter the Bluetooth MAC address or CoreBluetooth UUID of your Mocreo ST7-CL thermostat.",
+        "data": {
+          "address": "Bluetooth Address / UUID",
+          "poll_interval": "Polling interval (seconds)"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Discovered Mocreo Thermostat",
+        "description": "Do you want to set up {name} ({address})?",
+        "data": {
+          "poll_interval": "Polling interval (seconds)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Device is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Configure Mocreo Thermostat",
+        "data": {
+          "poll_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "number": {
+      "relay_low": {
+        "name": "Relay low setpoint"
+      },
+      "relay_high": {
+        "name": "Relay high setpoint"
+      }
+    },
+    "select": {
+      "mode": {
+        "name": "Mode",
+        "state": {
+          "Heating": "Heating",
+          "Cooling": "Cooling"
+        }
+      }
+    }
+  }
+}
